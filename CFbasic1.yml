@@ -1,0 +1,15 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Description: Template to create an EC2 instance with specific details
+Resources:
+  EC2Instance:
+    Type: AWS::EC2::Instance
+    Properties:
+      ImageId: ami-05b10e08d247fb927
+      InstanceType: t2.micro
+      KeyName: Ubuntukey
+      SecurityGroupIds:
+        - sg-59a1f41f
+        
+# This is basic cloudformation template. 
+#This will create only Amazon ec2. 
+#Update key, amazon image id, security group name as per your infra details. 
